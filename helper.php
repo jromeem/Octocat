@@ -5,23 +5,19 @@ function test(){
 
 function databaseAccess(){
 
-try {
-$conn = new PDO ( "sqlsrv:server = tcp:w6wekl8y64.database.windows.net,1433; Database = octocat_db", "octocat", "Hacktx12");
-$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
-}
-catch ( PDOException $e ) {
-print( "Error connecting to SQL Server." );
-die(print_r($e));
-}
+	$host = "http://www.texaswushu.org/";
+	$user = "drupal_kxuj";
+	$pass = "bel502a";
+	$dbname = "drupal_kxuj";
+	$encpass = md5("bel502a");
 
-#SQL Server Extension Sample Code:
+	mysql_connect($host, $user, $pass);
+	mysql_select_db($dbname);
+	$result = mysql_query("SELECT * FROM teletub_users");
+	
+	echo var_dump($result);
 
-$connectionInfo = array("UID" => "octocat@w6wekl8y64", "pwd" => "Hacktx12", "Database" => "octocat_db", "LoginTimeout" => 30, "Encrypt" => 1);
-$serverName = "tcp:w6wekl8y64.database.windows.net,1433";
-$conn = sqlsrv_connect($serverName, $connectionInfo);
-
-return $conn;
-
+	return $conn;
 }
 
 ?>

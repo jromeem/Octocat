@@ -10,7 +10,7 @@
 	
 	echo $word[0];
 	
-	echo $con;
+	print_r($con);
 	//go int ocreat row in db of table 
 
 ?>
