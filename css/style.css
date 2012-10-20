@@ -28,7 +28,7 @@ canvas{
 .topbar{
 	position: relative;
 	top: -15px;
-	left:400px;
+	left:600px;
 }
 
 li{
@@ -50,7 +50,8 @@ li{
 #centerButtons{
 	position: relative;
 	top:90px;
-	left:0px;
+	left:300px;
 	width:260px;
+	
 	
 }
