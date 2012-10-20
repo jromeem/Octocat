@@ -20,6 +20,6 @@ for($i=0; $i<=count($allGames); $i++){
 }
 
 $phrase_json = json_encode(array(0 => $phrase));
-echo $phrase_json;*/
+echo $phrase_json;
 
 ?>
