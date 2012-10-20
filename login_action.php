@@ -12,7 +12,7 @@ header('Content-Type: application/json');
 if (!empty($array)) {
 	$_SESSION['username'] = $username;
 	$_SESSION['user_id']  = $array[0]['id'];
-	$_SESSION['turn']  = 'draws';
+	$_SESSION['turn']  = 'words';
 	echo '{"status":"success"}';
 } else {
 	echo '{"status":"failure"}';

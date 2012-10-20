@@ -10,11 +10,11 @@
 	$query = 'SELECT * FROM games WHERE id='.$rand_val;
 	$result = connectAndRead($query);
 	
-	$play = '';
+	$play = 'trollolol';
 	if ($_SESSION['turn'] == 'words') {
-		$play = json_decode($result[0]['words']);
+		$play = json_decode($result[0]['words'])[0];
 	} else {
-		$play = json_decode($result[0]['draws']);
+		$play = json_decode($result[0]['draws'])[0];
 	}
 
 ?>
