@@ -36,9 +36,8 @@
 		$(document).ready(function(){
 			$('#register, #login').hover(
 				function(){
-					console.log($(this).children().html());
 					var bid = $(this).attr('id');
-					$(this).children().html('<img src="img/' + bid + '_dp.png" />);
+					$(this).children().html('<img src="img/' + bid + '_dp.png" />');
 				},
 				function(){
 					console.log($(this).children().html());
