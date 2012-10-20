@@ -38,11 +38,11 @@
 				<input type="text" id="register-username" name="username" />
 			</form>
 		</div>
-		<!--<div id="loginPopup">
+		<div id="loginPopup">
 			<form id="login-form">
 				Enter your username: <input type="text" id="login-username" name="username" />
 			</form>
-		</div>-->
+		</div>
 	</div><!--container end div-->
 	</body>
 	<script>
@@ -64,9 +64,9 @@
 				$("#register-form").fadeIn();
 			});
 			$('#login').click(function(){
-				$("#register").fadeOut();
 				$("#login").fadeOut();
-				$("#register-form").fadeIn();
+				$("#login").fadeOut();
+				$("#login-form").fadeIn();
 			});
 		});
 	</script>
