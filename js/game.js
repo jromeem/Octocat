@@ -78,7 +78,10 @@ $(document).ready(function(){
 	});
 
 	$('#save').click(function(){
-		var url = $('canvas')[0].toDataURL();
-		window.location = url;
+		var drawing_url = $('canvas')[0].toDataURL();
+		var data = { drawing: drawing_url }
+		$.post('drew_action.php', data, function(drewResult) {
+			console.log(drewResult);
+		});
 	});
 });

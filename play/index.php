@@ -5,6 +5,7 @@
 	$rand_val = rand(1, 10);
 	$query = 'SELECT * FROM games WHERE id='.$rand_val;
 	$result = connectAndRead($query);
+	$_SESSION['game_id'] = $rand_val;
 	
 	$play = '';
 	if ($_SESSION['turn'] == 'words') {
@@ -48,12 +49,13 @@
 			<div id="gameDiv">
 				<?php
 					if ($_SESSION['turn'] == 'words') {
-						echo "<h1>turn is words; here is play: $play</h1>";
-						$_SESSION['turn'] = 'draws';
-					} else {
-						echo '<div id="canvasDiv">
+						// output a drawing
+						echo '<div id="canvasDiv"><h1>Try to draw ' . $play . '!</h1>
 							  <button id="clear">Clear!</button>
 							  <button id="save">Save!</button></div>';
+						//$_SESSION['turn'] = 'draws';
+					} else {
+						echo "<h1>turn is words; here is play: $play</h1>";
 						$_SESSION['turn'] = 'words';
 					}
 				?>
