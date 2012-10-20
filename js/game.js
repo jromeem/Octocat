@@ -72,9 +72,13 @@ $(document).ready(function(){
 	$('#clear').click(function(){
 		$('#canvas').attr('width', 5)
 								.attr('width', 400);
-
 		clickX = [];
 		clickY = [];
 		clickDrag = [];
+	});
+
+	$('#save').click(function(){
+		var url = $('canvas')[0].toDataURL();
+		window.location = url;
 	});
 });
