@@ -14,8 +14,8 @@ for($i=0; $i<=count($allGames); $i++){
 		$drawsArray=$allGames[i][draws];
 		//display connect to index.html
 		for($j=0; $j<=count($wordsArray); $j++){
-			echo wordsArray[$j];
-			echo drawsArray[$j];//canvas
+			echo "wordsArray[$j]: " . wordsArray[j] . "<br />";
+			echo "drawssArray[$j]: " . drawsArray[j] . "<br />";
 		}
 }
 
