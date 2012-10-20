@@ -4,20 +4,19 @@ function test(){
 }
 
 function databaseAccess(){
+	
+	$mysql_host = "mysql6.000webhost.com";
+	$mysql_database = "a4259366_octo";
+	$mysql_user = "a4259366_octo";
+	$mysql_password = "asdf1234";
 
-	$host = "http://www.texaswushu.org/";
-	$user = "drupal_kxuj";
-	$pass = "bel502a";
-	$dbname = "drupal_kxuj";
-	$encpass = md5("bel502a");
-
-	mysql_connect($host, $user, $pass);
-	mysql_select_db($dbname);
-	$result = mysql_query("SELECT * FROM teletub_users");
+	mysql_connect($mysql_host, $mysql_user, $mysql_password);
+	mysql_select_db($mysql_database);
+	$result = mysql_query("SELECT * FROM users");
 	
 	echo var_dump($result);
 
-	return $conn;
+	return $result;
 }
 
 ?>
