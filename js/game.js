@@ -10,18 +10,20 @@ $(document).ready(function(){
 	}
 	context = canvas.getContext("2d");
 
+	var offset = $('#canvas').offset();
+
 	$('#canvas').mousedown(function(e){
-		var mouseX = e.pageX - this.offsetLeft;
-		var mouseY = e.pageY - this.offsetTop;
+		var mouseX = e.pageX + offset.left;
+		var mouseY = e.pageY + offset.top;
 			
 		paint = true;
-		addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop);
+		addClick(e.pageX - offset.left, e.pageY - offset.top);
 		redraw();
 	});
 
 	$('#canvas').mousemove(function(e){
 		if(paint){
-			addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop, true);
+			addClick(e.pageX - offset.left, e.pageY - offset.top, true);
 			redraw();
 		}
 	});
@@ -49,7 +51,7 @@ $(document).ready(function(){
 	function redraw(){
 		canvas.width = canvas.width; // Clears the canvas
 		
-		context.strokeStyle = "#df4b26";
+		context.strokeStyle = "#000000";
 		context.lineJoin = "round";
 		context.lineWidth = 5;
 				
@@ -66,4 +68,13 @@ $(document).ready(function(){
 			 context.stroke();
 		}
 	}
+
+	$('#clear').click(function(){
+		$('#canvas').attr('width', 5)
+								.attr('width', 400);
+
+		clickX = [];
+		clickY = [];
+		clickDrag = [];
+	});
 });
