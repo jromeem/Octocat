@@ -81,6 +81,6 @@ li{
 	left: 170px;
 }
 
-p #registerPopup {
-	display:hidden;
+#registerPopup {
+	display:none;
 }
