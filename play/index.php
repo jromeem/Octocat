@@ -53,8 +53,8 @@
 						
 						// user writes
 						echo '<div id="canvasWrapper"><div id="canvasDiv"></div><h4>Try to draw ' . $play . '!</h4>
-							  <button id="clear">Clear!</button>
-							  <button id="save">Save!</button></div>';
+							  <img src="../img/trash.png" id="clear" />
+							  <img src="../img/save.png" id="save" /></div>';
 						$_SESSION['turn'] = 'draws';
 					} else {
 						echo '<img id="play-img" src="' . $play . '"></img>
