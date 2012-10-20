@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<script src="js/jquery-1.8.2.min.js"></script>
+		<script src="js/registerlogin.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<title> Telephone Pictionary </title>
+	</head>
+	<body>
+    <div class="container">
+		<div id="header">
+            <table>
+            	<tr>
+                <td>
+        			<div id = "logo">
+						<!-- reference register_action.php here -->
+						<img src="img/octomom_logo.png" id="logo"/>
+        			</div>
+                </td>
+                <td>   
+           			<div class = "topbar">
+				<!--<img src="img/archive.png" id="menuIcon"/>-->
+            		</div>
+                </td>
+                </tr>
+           </table>
+		</div>
+        	<div id="centerButtons">
+        		<div id="login"><img src="img/login.png" /></div>
+                <br />
+            	<div id="register"><img src="img/register.png" /></div>
+       		</div>
+
+		<div id="registerPopup">
+			<form id="register-form">
+				Enter your desired username: <br/><br/>
+				<input type="text" id="register-username" name="username" /><br />
+				<img src="img/submit_h.png" id="register-submit" />
+			</form>
+		</div>
+		<div id="loginPopup">
+			<form id="login-form">
+				Enter your username: <br/><br/>
+				<input type="text" id="login-username" name="username" /><br />
+				<img src="img/submit_h.png" id="login-form-submit" />
+			</form>
+		</div>
+	</div><!--container end div-->
+	</body>
+	<script>
+		$(document).ready(function(){
+			$('#register, #login').hover(
+				function(){
+					var imgName = $(this).attr('id');
+					$(this).children().attr('src', 'img/' + imgName + '_dp.png');
+				},
+				function(){
+					var imgName = $(this).attr('id');
+					$(this).children().attr('src', 'img/' + imgName + '.png');
+				}
+			);
+			
+			$('#register').click(function(){
+				$("#register").fadeOut();
+				$("#login").fadeOut();
+				$("#register-form").fadeIn();
+			});
+			$('#login').click(function(){
+				$("#register").fadeOut();
+				$("#login").fadeOut();
+				$("#login-form").fadeIn();
+			});
+			
+			$('#logo').click(function(){
+				window.location="http://octocat.comyr.com/menu/";
+			});
+			
+		});
+		
+		
+	</script>
+</html>
