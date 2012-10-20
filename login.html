@@ -26,12 +26,12 @@
 		</div>
 	</body>
 	<script>
-		$('input[type="button"]').hover(function(){
+		$('img').hover(function(){
 			var b = $(this).attr('id');
-			$('#' + b).html('<img src="depressed ' + b + '" />');
+			$('#' + b).html('<img src="' + b + '_dp" />');
 		}, function(){
 			var b = $(this).attr('id');
-			$('#' + b).html('<img src="normal ' + b + '" />');
+			$('#' + b).html('<img src="' + b + '" />');
 		});
 	</script>
 </html>
