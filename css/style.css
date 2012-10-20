@@ -92,3 +92,11 @@ li{
 	margin-top: 150px;
 	margin-left: 300px;
 }
+
+#menulogout:hover {
+	cursor:pointer;
+}
+
+#menuIcon:hover {
+	cursor:pointer;
+}
