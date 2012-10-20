@@ -32,10 +32,12 @@
 	</div><!--container end div-->
 	</body>
 	<script>
-		$('#createButton').hover(function(){
-			$('#createButton').html('<img src="depressed button" />');
+		$('img').hover(function(){
+			var b = $(this).attr('id');
+			$('#' + b).html('<img src="' + b + '_dp" />');
 		}, function(){
-			$('#createButton').html('<img src="normal button" />');
+			var b = $(this).attr('id');
+			$('#' + b).html('<img src="' + b + '" />');
 		});
 	</script>
 </html>
