@@ -1,6 +1,6 @@
 <?php
 
-include '../helpers.php';
+include '../helper.php';
 
 $game_id = $_SESSION['game_id'];
 
