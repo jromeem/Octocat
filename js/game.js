@@ -71,7 +71,7 @@ $(document).ready(function(){
 			}
 		}
 
-		$('#clear').click(function(){
+		$('#clear').onclick(function(){
 			$('#canvas').attr('width', 5)
 									.attr('width', 400);
 			clickX = [];
@@ -79,7 +79,7 @@ $(document).ready(function(){
 			clickDrag = [];
 		});
 
-		$('#save').click(function(){
+		$('#save').onclick(function(){
 			var drawing_url = $('canvas')[0].toDataURL();
 			var data = { drawing: drawing_url }
 			$.post('drew_action.php', data, function(drewResult) {
