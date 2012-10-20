@@ -85,15 +85,18 @@ $(document).ready(function(){
 			$.post('drew_action.php', data, function(drewResult) {
 				console.log(drewResult);
 			});
+			document.location.reload(true);
 		});
 	}
 
 	$('#wordInput').keypress(function(e){
+		if ($('#wordInput').val() == '') return;
 		if (e.keyCode == 13){
 			var data = { phrase : $('#wordInput').val() };
 			$.post('wrote_action.php', data, function(wroteResult) {
 				console.log(wroteResult);
 			});
+			document.location.reload(true);
 			return false;
 		}
 	});
