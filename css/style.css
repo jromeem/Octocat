@@ -93,6 +93,23 @@ li{
 	margin-left: 300px;
 }
 
+
+#wordInput{
+	width: 300px;
+	height: 30px;
+}
+
+#archiveTable{
+	position: relative;
+	top:90px;
+	left:200px;
+	width:230px;
+	
+}
+#slideShow {
+	height: 232px;
+	width: 232px;
+}	
 #menulogout:hover {
 	cursor:pointer;
 }
@@ -103,4 +120,5 @@ li{
 
 #icon:hover {
 	cursor:pointer;
+
 }
