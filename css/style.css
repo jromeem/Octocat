@@ -1,7 +1,11 @@
+body{
+	background-color:#CCCCCC;
+}
 #content{ 
 	position:relative; 
 	margin:0 auto; 
-	width:1000px; 
+	width:1000px;
+	background-color:#CCCCCC;
 }
 
 #canvasDiv{
@@ -18,12 +22,12 @@ canvas{
 	position: relative;
 	top: 15px; 
 	left:20px; 
-	width:100px;
+	width:130px;
 }
 
 .topbar{
 	position: relative;
-	top: 15px;
+	top: -15px;
 	left:400px;
 }
 
@@ -33,7 +37,12 @@ li{
 	float: right;
 }
 
-#container{
+.container{
 	width:960px;
 }
-	
+
+#menuIcon{
+	width:150px;
+	position:relative;
+	top:0px;
+}
