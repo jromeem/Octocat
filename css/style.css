@@ -46,3 +46,11 @@ li{
 	position:relative;
 	top:0px;
 }
+
+#centerButtons{
+	position: relative;
+	top:70px;
+	left:320px;
+	width:120px;
+	
+}
