@@ -5,18 +5,34 @@ function test(){
 
 function databaseAccess(){
 	
-	$mysql_host = "mysql6.000webhost.com";
-	$mysql_database = "a4259366_octo";
-	$mysql_user = "a4259366_octo";
-	$mysql_password = "asdf1234";
-
-	mysql_connect($mysql_host, $mysql_user, $mysql_password);
-	mysql_select_db($mysql_database);
-	$result = mysql_query("SELECT * FROM users");
+	mysql_connect($host, $user, $pass);
+	mysql_select_db($dbname);
 	
-	echo var_dump($result);
+	$result = mysql_query("SELECT * FROM teletub_users");
+	
+	while($row = mysql_fetch_array($con)) {
+		echo $row['username'];
+		echo "<br/>";
+	}
 
 	return $result;
 }
+
+function connectAndQuery($query) {
+	include 'config.php';
+	
+	mysql_connect($host, $user, $pass);
+	mysql_select_db($dbname);
+	
+	$result = mysql_query($query);
+	
+	$array = array();
+	while($row = mysql_fetch_array($result)) {
+		array_push($array, $row);
+	}
+	
+	return $array;
+}
+
 
 ?>

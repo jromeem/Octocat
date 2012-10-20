@@ -1,13 +1,14 @@
 <?php
     include 'helper.php';
 	
-    $con = databaseAccess();
-	if (empty($con))
-		echo "con is empty";
-
+	$query = 'SELECT * FROM teletub_users';
+    $result = connectAndQuery($query);
+	
+	//print_r($result);
+	echo $result[0]['username'];
+	
 	$creator = '';
 	$word[0] = $_POST["wordInput"];	
-	
 	
 	echo $word[0];
 	
