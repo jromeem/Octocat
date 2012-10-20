@@ -13,7 +13,9 @@ $gameStack = connectAndRead($gameStackQuery);
 // if there were previous draws
 if (!empty($gameStack)) {
 	$stackArr = json_decode($gameStack[0]);
-	$newStack = array_push($stackJson, $drawing);
+	
+	$newStack = array_push($stackArr, $drawing);
+	
 	$newStackJson = json_encode($newStack);
 	
 	$drawQuery = "UPDATE games SET draws='$newStackJson' WHERE id=$gameId";

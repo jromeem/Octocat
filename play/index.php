@@ -1,4 +1,8 @@
-<?php session_start(); 
+<?php 
+	session_start(); 
+
+	if (empty($_SESSION['username']))
+		header('Location: http://octocat.comyr.com/logout.php');
 
 	include '../helper.php';
 
