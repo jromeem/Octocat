@@ -27,12 +27,12 @@
 	</div><!--container end div-->
 	</body>
 	<script>
-		$('img').hover(function(){
+		$('#register, #login').hover(function(){
 			var b = $(this).attr('id');
-			$('#' + b).html('<img src="' + b + '_dp" />');
+			$('#' + b).html('<img src="img/' + b + '_dp.png" />');
 		}, function(){
 			var b = $(this).attr('id');
-			$('#' + b).html('<img src="' + b + '" />');
+			$('#' + b).html('<img src="img/' + b + '.png" />');
 		});
 	</script>
 </html>
