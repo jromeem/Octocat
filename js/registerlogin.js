@@ -7,8 +7,8 @@ $(document).ready(function(){
 	$('#register-username').keypress(function(e){
 		if (e.keyCode == 13){
 			var data = { username : $('#register-username').val() };
-			$.post('register_action.php', data, function(result) {
-				if (result['status'] == 'failure'){
+			$.post('register_action.php', data, function(regResult) {
+				if (regResult['status'] == 'failure'){
 					$('body').html('<h1>NAME ALREADY TAKEN, TOO BAD</h1>');
 				}
 				else{
@@ -27,8 +27,8 @@ $(document).ready(function(){
 	$('#login-username').keypress(function(e){
 		if (e.keyCode == 13){
 			var data = { username : $('#login-username').val() };
-			$.post('login_action.php', data, function(result) {
-				if (result['status'] == 'failure'){
+			$.post('login_action.php', data, function(loginResult) {
+				if (loginResult['status'] == 'failure'){
 					alert('bad login');
 				}
 				else {
