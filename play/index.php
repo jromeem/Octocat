@@ -6,12 +6,13 @@
 	$query = 'SELECT * FROM games WHERE id='.$rand_val;
 	$result = connectAndRead($query);
 	
-	$play = 'trollolol';
+	$play = '';
 	if ($_SESSION['turn'] == 'words') {
-		$play = json_decode($result[0]['words'])[0];
+		$play = json_decode($result[0]['words']);
 	} else {
-		$play = json_decode($result[0]['draws'])[0];
+		$play = json_decode($result[0]['draws']);
 	}
+	$play = $play[0];
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -47,7 +48,7 @@
 			<div id="gameDiv">
 				<?php
 					if ($_SESSION['turn'] == 'words') {
-						echo "<h1>$play</h1>";
+						echo "<h1>turn is words; here is play: $play</h1>";
 						$_SESSION['turn'] = 'draws';
 					} else {
 						echo '<div id="canvasDiv">
