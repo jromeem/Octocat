@@ -57,14 +57,14 @@
 							  <button id="save">Save!</button></div>';
 						$_SESSION['turn'] = 'draws';
 					} else {
-						echo '<img id="play-img" src="' . $play . '"></img>';
-						$_SESSION['turn'] = 'words';
-					}
-				?>
+						echo '<img id="play-img" src="' . $play . '"></img>
 				<div id="wordDiv">
 					<h4>Guess this drawing!</h4>
 					<input type="text" id="wordInput" />
-				</div>
+				</div>';
+						$_SESSION['turn'] = 'words';
+					}
+				?>
 			</div>
 			<!-- <a href="next page"><img src="trashhhh" id="createButton" /></a>
 			<a href="other next page"><img src="other trash" id="playButton" /></a> -->
