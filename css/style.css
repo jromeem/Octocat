@@ -135,3 +135,11 @@ li{
 	width:400px;
 	margin:0 auto;
 }
+
+#save:hover {
+	cursor:pointer;
+}
+
+#clear:hover {
+	cursor:pointer;
+}
