@@ -51,8 +51,6 @@
            </table>
 		</div>
 		<div >
-			<div id="notepad">
-				<img src="../img/notepad.png" />
 			<div id="gameDiv">
 				<?php
 					if ($_SESSION['turn'] == 'words') {
@@ -72,7 +70,6 @@
 						$_SESSION['turn'] = 'words';
 					}
 				?>
-			</div>
 			</div>
 			<!-- <a href="next page"><img src="trashhhh" id="createButton" /></a>
 			<a href="other next page"><img src="other trash" id="playButton" /></a> -->
