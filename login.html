@@ -36,11 +36,12 @@
 			$('#register, #login').hover(
 				function(){
 					var bid = $(this).attr('id');
+					console.log(bid);
 					$(this).children().html('<img src="img/' + bid + '_dp.png" />');
 				},
 				function(){
-					console.log($(this).children().html());
 					var bid = $(this).attr('id');
+					console.log(bid);
 					$(this).children().html('<img src="img/' + bid + '.png" />');
 				}
 			);
