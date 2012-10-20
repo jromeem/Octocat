@@ -14,16 +14,17 @@ $(document).ready(function(){
 
 	$('#canvas').mousedown(function(e){
 		var mouseX = e.pageX + offset.left;
-		var mouseY = e.pageY + offset.top;
+		var mouseY = e.pageY - offset.top - 80;
+		console.log(offset);
 			
 		paint = true;
-		addClick(e.pageX - offset.left, e.pageY - offset.top);
+		addClick(e.pageX - offset.left, e.pageY - offset.top - 80);
 		redraw();
 	});
 
 	$('#canvas').mousemove(function(e){
 		if(paint){
-			addClick(e.pageX - offset.left, e.pageY - offset.top, true);
+			addClick(e.pageX - offset.left, e.pageY - offset.top - 80, true);
 			redraw();
 		}
 	});
@@ -78,7 +79,10 @@ $(document).ready(function(){
 	});
 
 	$('#save').click(function(){
-		var url = $('canvas')[0].toDataURL();
-		window.location = url;
+		var drawing_url = $('canvas')[0].toDataURL();
+		var data = { drawing: drawing_url }
+		$.post('drew_action.php', data, function(drewResult) {
+			console.log(drewResult);
+		});
 	});
 });
