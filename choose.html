@@ -16,24 +16,27 @@
 						<img src="img/octomom_logo.png" id="logo"/>
         			</div>
                 </td>
-                <td>   
-           			<div class = "topbar">
-                		<img src="img/archive.png" id="menuIcon"/> 
+                <td>
+                <div class = "topbar">
+                		<ul>
+                    		<li><img src="img/archive.png" id="menuIcon"/></li>
+                        	<li><img src="img/logout.png" id="menulogout"/></li>
+                    	</ul>
             		</div>
                 </td>
                 </tr>
            </table>
 		</div>
         	<div id="centerButtons">
-        		<div id="login"><img src="img/login.png" /></div>
+        		<div id="play"><img src="img/play.png" /></div>
                 <br />
-            	<div id="register"><img src="img/register.png" /></div>
+            	<div id="create"><img src="img/create.png" /></div>
        		</div>
 	</div><!--container end div-->
 	</body>
 	<script>
 		$(document).ready(function(){
-			$('#register, #login').hover(
+			$('#create, #play').hover(
 				function(){
 					var imgName = $(this).attr('id');
 					$(this).children().attr('src', 'img/' + imgName + '_dp.png');
