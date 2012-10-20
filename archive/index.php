@@ -12,9 +12,14 @@
 
 	<script>
 		$(document).ready(function(){
-			// find all complete games
-			// while there are records or less than some arbitrary amount
-			// insert div with clickable first picture (click to view assoc images) 
+			var games = new Array();
+			// find all complete games, divide up into pages of (9?) divs
+			// while there is a set of 9 left
+			// insert (9?) divs (a square) with clickable first pictures (click to view assoc images)
+			// click left or right to scroll to next "page" of pics
+			// for example
+			// iono guysz
+			// iono
 		});
 	</script>
 </html>
