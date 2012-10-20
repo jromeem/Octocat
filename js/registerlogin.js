@@ -32,7 +32,7 @@ $(document).ready(function(){
 					alert('bad login');
 				}
 				else {
-					window.location = "/play";
+					window.location = "/menu";
 				}
 			});
 			return false;
