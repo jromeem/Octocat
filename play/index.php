@@ -2,9 +2,15 @@
 
 	include '../helper.php';
 	
+	/*
 	$countQuery = 'SELECT COUNT(*) FROM games';
 	$countResult = connectAndRead($countQuery);
-	$count = $countResult[0];
+	$count = $countResult;
+	*/
+	
+	//echo = $countResult;
+	
+	//$rand_val = rand(1, $count);
 	
 	$rand_val = rand(1, $count);
 	$query = 'SELECT * FROM games WHERE id='.$rand_val;
@@ -52,12 +58,12 @@
 				<?php
 					if ($_SESSION['turn'] == 'words') {
 						echo "<h1>$play</h1>";
-						$_SESSION['turn'] = 'draws';
+						//$_SESSION['turn'] = 'draws';
 					} else {
 						echo '<div id="canvasDiv">
 							  <button id="clear">Clear!</button>
 							  <button id="save">Save!</button></div>';
-						$_SESSION['turn'] = 'words';
+						//$_SESSION['turn'] = 'words';
 					}
 				?>
 				<div id="wordDiv">
