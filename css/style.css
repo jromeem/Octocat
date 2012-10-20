@@ -148,3 +148,8 @@ float:right;
 #clear:hover {
 	cursor:pointer;
 }
+
+#avatars {
+	position:relative;
+	right:120px;
+}
