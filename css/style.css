@@ -43,9 +43,8 @@ li{
 }
 
 .container{
-    background-color:#CCCCCC;
+  background-color:#CCCCCC;
 	width:800px;
-	height:600px;
 	
 }
 
@@ -123,5 +122,15 @@ li{
 
 #icon:hover {
 	cursor:pointer;
+}
 
+#play-img {
+	margin:0 auto;
+	border:1px solid black;
+	width:402px;
+}
+
+#gameDiv {
+	width:400px;
+	margin:0 auto;
 }
