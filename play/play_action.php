@@ -14,6 +14,4 @@ connectAndWrite($query);
 $wordsQuery = "INSERT INTO games (words) VALUES ('" . $phrase_json . "')";
 connectAndWrite($query);
 
-
-
 ?>

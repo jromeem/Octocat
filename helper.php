@@ -18,6 +18,8 @@ function connectAndRead($query) {
 	}
 	catch (Exception $e) {}
 	
+	mysql_close();
+	
 	return $array;
 }
 
@@ -28,6 +30,8 @@ function connectAndWrite($query) {
 	mysql_select_db($dbname);
 	
 	$result = mysql_query($query);
+	
+	mysql_close();
 }
 
 ?>
