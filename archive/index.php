@@ -2,14 +2,13 @@
 
 include '../helper.php';
 
-$allGamesQuery = "SELECT *";
+$allGamesQuery = "SELECT * FROM games WHERE game_over='1'";
 
 $allGames = connectAndRead($allGamesQuery);
+echo "size: " + count($allGames);
 
 // get the word array
 for($i=0; $i<=count($allGames); $i++){
-	echo "going through all games"+i;
-	if($allGames[i][game_over] == 1){
 		echo "game is over";
 		$wordsArray=$allGames[i][words];
 		$drawsArray=$allGames[i][draws];
@@ -18,7 +17,6 @@ for($i=0; $i<=count($allGames); $i++){
 			echo "wordsArray[$j]: " . wordsArray[j] . "<br />";
 			echo "drawssArray[$j]: " . drawsArray[j] . "<br />";
 		}
-	}
 }
 
 $phrase_json = json_encode(array(0 => $phrase));
