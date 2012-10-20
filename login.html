@@ -7,23 +7,29 @@
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 	</head>
 	<body>
+    <div class="container">
 		<div id="header">
-			<img src="img/octomom_logo.png" id="logo" width="100px" height="100px" />
+            <table>
+            	<td>
+                <th>
+        			<div id = "logo">
+						<img src="img/octomom_logo.png" id="logo"/>
+        			</div>
+                </th>
+                <th>   
+           			<div class = "topbar">
+            			<ul> 
+                			<li> <img src="img/octomom_logo.png" id="logo"/> </li>
+                    		<li> <img src="img/octomom_logo.png" id="logo"/> </li>
+                    		<li> <img src="img/octomom_logo.png" id="logo"/> </li>
+                		</ul>
+            		</div>
+                </th>
+                </td>
+           </table>
+            
 		</div>
-		<div id="content">
-			<div id="gameDiv">
-				<div id="canvasDiv">
-					<button id="clear">Clear!</button>
-					<button id="save">Save!</button>
-				</div>
-				<div id="wordDiv">
-					WHAT IS THIS<br />
-					<input type="text" id="wordInput" />
-				</div>
-			</div>
-			<!-- <a href="next page"><img src="trashhhh" id="createButton" /></a>
-			<a href="other next page"><img src="other trash" id="playButton" /></a> -->
-		</div>
+	</div><!--container end div-->
 	</body>
 	<script>
 		$('#createButton').hover(function(){
