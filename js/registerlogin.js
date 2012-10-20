@@ -26,7 +26,7 @@ $(document).ready(function(){
 				$('body').html('<h1>NAME ALREADY TAKEN, TOO BAD</h1>');
 			}
 			else{
-				$('body').html('<h1>GOOD JOB, YOU REGISTERED</h1>');
+				window.location = 'http://www.octocat.comyr.com';
 			}
 		});
 		return false;
