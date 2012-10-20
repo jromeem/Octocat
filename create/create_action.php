@@ -6,7 +6,10 @@ include 'helper.php';
 $phrase = $_POST['phrase'];
 $user_id = $_SESSION['user_id'];
 
-$query = "INSERT INTO games (creator, words) VALUES ('" .user_id. ", " .$words. "')";
-connectAndWrite($query);
+$phrase_json = json_encode(array(0 => $phrase));
+echo $phrase_json;
+
+//$query = "INSERT INTO games (creator, words) VALUES ('" .user_id. ", " .$phrase_json. "')";
+//connectAndWrite($query);
 
 ?>
