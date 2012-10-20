@@ -7,9 +7,15 @@
         	<link rel="stylesheet" type="text/css" href="css/style.css" />
         </head>
         <body>
-    		<div class="container">
-			
-		</div>
+    		<div class="container"></div>
 	</body>
+
+	<script>
+		$(document).ready(function(){
+			// find all complete games
+			// while there are records or less than some arbitrary amount
+			// insert div with clickable first picture (click to view assoc images) 
+		});
+	</script>
 </html>
 

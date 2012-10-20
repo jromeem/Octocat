@@ -80,3 +80,7 @@ li{
 	position: relative;
 	left: 170px;
 }
+
+p #registerPopup {
+	display:none;
+}
