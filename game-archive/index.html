@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script src="../js/jquery-1.8.2.min.js"></script>
+<script src="../js/jquery.cycle.all.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+<link rel="stylesheet" href="../css/style.css" />
+<title>Telephone Pictionary: Archive</title>
+</head>
+
+<body>
+    <div class="container">
+		<div id="header">
+            <table>
+            	<tr>
+                <td>
+        			<div id = "logo">
+						<img src="../img/octomom_logo.png" id="logo"/>
+        			</div>
+                </td>
+                <td>   
+           			<div class = "topbar">
+                		   <ul>
+                    	<li><img src="../img/archive.png" id="menuIcon"/></li>
+                        <li><img src="../img/logout.png" id="menulogout" /></li>
+                    </ul>
+            		</div>
+                </td>
+                </tr>
+           </table>
+		</div>
+        	<div id="archiveTable">
+        		<div id="slideShow">
+                    <ul id = "slides">
+                            <li><img id="image" src="../img/1.png"  width="500px"/></li>
+                            <li><img src="../img/2.png" width="500px"/></li>
+                            <li><img src="../img/3.png" width="500px" /></li>
+                            <li><img src="../img/4.png"  width="500px"/></li>
+                            <li><img src="../img/5.png" width="500px"/></li>
+                            <li><img src="../img/6.png" width="500px" /></li>
+                    </ul>
+                </div>
+            	
+       		</div>
+	</div><!--container end div-->
+
+</body>
+<script>
+        $(document).ready(function(){
+
+            $('ul#slides').cycle({
+                fx: 'fade',
+                speed: 300,
+                timeout: 3000, 
+                next:   '#slides', 
+                pause:   1 
+            });
+
+            
+        });
+    </script>
+</html>
