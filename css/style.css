@@ -1,5 +1,7 @@
 body{
-	background-color:#CCCCCC;
+    background-color:#CCCCCC;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#666666;
 }
 #content{ 
 	position:relative; 
@@ -28,7 +30,7 @@ canvas{
 .topbar{
 	position: relative;
 	top: -15px;
-	left:400px;
+	left:600px;
 }
 
 li{
@@ -39,6 +41,7 @@ li{
 
 .container{
 	width:960px;
+	
 }
 
 #menuIcon{
@@ -50,7 +53,19 @@ li{
 #centerButtons{
 	position: relative;
 	top:90px;
-	left:0px;
+	left:400px;
 	width:260px;
 	
+	
+}
+
+#inputtext { 
+	width: 300px; 
+	height: 44px; 
+}
+
+#createButton {
+    width: 140px;
+	position: relative;
+	left: 170px;
 }
