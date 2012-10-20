@@ -9,7 +9,13 @@
 	<body>
 		<div id="header"></div>
 		<div id="content">
-			<div id="canvasDiv"></div>
+			<div id="gameDiv">
+				<div id="canvasDiv"></div>
+				<div id="wordDiv">
+					WHAT IS THIS<br />
+					<input type="text" id="wordInput" />
+				</div>
+			</div>
 			<!-- <a href="next page"><img src="trashhhh" id="createButton" /></a>
 			<a href="other next page"><img src="other trash" id="playButton" /></a> -->
 		</div>
