@@ -50,7 +50,7 @@
 				<?php
 					if ($_SESSION['turn'] == 'words') {
 						// output a drawing
-						echo '<div id="canvasDiv"><h1>Try to draw ' . $play . '!</h1>
+						echo '<div id="canvasWrapper"><div id="canvasDiv"></div><h1>Try to draw ' . $play . '!</h1>
 							  <button id="clear">Clear!</button>
 							  <button id="save">Save!</button></div>';
 						//$_SESSION['turn'] = 'draws';
