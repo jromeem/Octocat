@@ -82,5 +82,5 @@ li{
 }
 
 p #registerPopup {
-	display:none;
+	display:hidden;
 }
