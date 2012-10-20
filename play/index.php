@@ -6,7 +6,7 @@
 
 	include '../helper.php';
 
-	$rand_val = rand(1, 10);
+	$rand_val = rand(1, 25);
 	$query = 'SELECT * FROM games WHERE id='.$rand_val;
 	$result = connectAndRead($query);
 	$_SESSION['game_id'] = $rand_val;
