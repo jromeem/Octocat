@@ -8,7 +8,9 @@ $phrase = $_POST['phrase'];
 
 $phrase_json = json_encode(array($phrase));
 
-$phraseQuery = "UPDATE games SET draws='$phrase_json' WHERE id=$game_id";
+echo $phrase_json;
+
+$phraseQuery = "UPDATE games SET words='$phrase_json' WHERE id=$game_id";
 
 connectAndWrite($phraseQuery);
 
