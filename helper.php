@@ -14,7 +14,7 @@ function connectAndRead($query) {
 			array_push($array, $row);
 		}
 	}
-	catch ($e) {}
+	catch (Exception $e) {}
 	
 	return $array;
 }

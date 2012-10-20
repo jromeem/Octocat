@@ -2,24 +2,18 @@
 
 include 'helper.php'
 
+session_start();
+
 // desired username for registrant
 $username = $_POST['username'];
 
-$query = 'SELECT * FROM teletub_users';
+$query = "SELECT * FROM users WHERE username='" . $username . "'";
 $array = connectAndQuery($query);
 
-$usernameExists = False;
-for ($i = 0; i<sizeof($array); i++) {
-	if ($array[i]['username'] == $username) {
-		$usernameExists = True;
-	}
-}
-
-header('Content-Type: application/json');
-if ($usernameExists) {
-	echo '{"status":"success"}';
+if (!empty($array)) {
+	$_SESSION['username'] = $username;
 } else {
-	echo '{"status":"failure"}';
+	header('Location:index.html');
 }
 
 ?>
