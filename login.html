@@ -35,13 +35,12 @@
 		$(document).ready(function(){
 			$('#register, #login').hover(
 				function(){
-					var bid = $(this).attr('id');
-					$(this).children().html('<img src="img/' + bid + '_dp.png" />');
+					var imgName = $(this).attr('id');
+					$(this).children().attr('src', 'img/' + imgName + '_dp.png');
 				},
 				function(){
-					console.log($(this).children().html());
-					var bid = $(this).attr('id');
-					$(this).children().html('<img src="img/' + bid + '.png" />');
+					var imgName = $(this).attr('id');
+					$(this).children().attr('src', 'img/' + imgName + '.png');
 				}
 			);
 		});
