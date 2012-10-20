@@ -6,11 +6,11 @@
 	$query = 'SELECT * FROM games WHERE id='.$rand_val;
 	$result = connectAndRead($query);
 	
-	$play = '';
+	$play = 'trollolol';
 	if ($_SESSION['turn'] == 'words') {
-		$play = json_decode($result[0]['words']);
+		$play = json_decode($result[0]['words'])[0];
 	} else {
-		$play = json_decode($result[0]['draws']);
+		$play = json_decode($result[0]['draws'])[0];
 	}
 
 ?>
@@ -48,10 +48,12 @@
 				<?php
 					if ($_SESSION['turn'] == 'words') {
 						echo "<h1>$play</h1>";
+						$_SESSION['turn'] = 'draws';
 					} else {
 						echo '<div id="canvasDiv">
 							  <button id="clear">Clear!</button>
 							  <button id="save">Save!</button></div>';
+						$_SESSION['turn'] = 'words';
 					}
 				?>
 				<div id="wordDiv">
