@@ -52,17 +52,17 @@
 						// user sees a drawing
 						
 						// user writes
-						echo '<div id="canvasWrapper"><div id="canvasDiv"></div><h1>Try to draw ' . $play . '!</h1>
+						echo '<div id="canvasWrapper"><div id="canvasDiv"></div><h4>Try to draw ' . $play . '!</h4>
 							  <button id="clear">Clear!</button>
 							  <button id="save">Save!</button></div>';
 						$_SESSION['turn'] = 'draws';
 					} else {
-						echo '<img src="' . $play . '"></img>';
+						echo '<img id="play-img" src="' . $play . '"></img>';
 						$_SESSION['turn'] = 'words';
 					}
 				?>
 				<div id="wordDiv">
-					WAT IS THIS, <?= $_SESSION['username']; ?>?????? YOUR USER ID IS <?= $_SESSION['user_id']; ?>
+					<h4>Guess this drawing!</h4>
 					<input type="text" id="wordInput" />
 				</div>
 			</div>
