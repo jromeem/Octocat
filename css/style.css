@@ -147,3 +147,11 @@ float:right;
 #clear:hover {
 	cursor:pointer;
 }
+
+#login-form-submit {
+	width:40%;
+}
+
+#register-submit {
+	width:40%;
+}
