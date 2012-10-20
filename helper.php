@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 function connectAndRead($query) {
 	include 'config.php';
 	

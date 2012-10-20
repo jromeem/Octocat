@@ -29,10 +29,10 @@ $(document).ready(function(){
 			var data = { username : $('#login-username').val() };
 			$.post('login_action.php', data, function(result) {
 				if (result['status'] == 'failure'){
-					$('body').html('<h1>LOGIN FAILURE, TOO BAD</h1>');
+					alert('bad login');
 				}
-				else{
-					$('body').html('<h1>GOOD JOB, YOU\'RE LOGGED IN</h1>');
+				else {
+					window.location = "/play";
 				}
 			});
 			return false;

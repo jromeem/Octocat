@@ -1,20 +1,18 @@
 <?php
 
-include 'helper.php'
+include 'helper.php';
 
-session_start();
-
-// desired username for registrant
+// login username
 $username = $_POST['username'];
 
-$query = "SELECT * FROM users WHERE username='" . $username . "'";
+$query = "SELECT * FROM users WHERE username='$username'";
 $array = connectAndRead($query);
 
 if (!empty($array)) {
 	$_SESSION['username'] = $username;
-	header('Location:/play');
+	header('Location: /play');
 } else {
-	header('Location:index.html');
+	header('Location: index.html');
 }
 
 ?>
