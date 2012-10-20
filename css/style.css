@@ -1,4 +1,39 @@
-#content													{ position:relative; margin:0 auto; width:1000px; }
-#canvasDiv												{ position:relative; margin:0 auto; width:400px; }
-canvas														{ border:1px solid black; }
-#logo															{ position:absolute; }
+#content{ 
+	position:relative; 
+	margin:0 auto; 
+	width:1000px; 
+}
+
+#canvasDiv{
+	 position:relative; 
+	 margin:0 auto; 
+	 width:400px; 
+}
+
+canvas{ 
+	border:1px solid black; 
+}
+
+#logo{ 
+	position: relative;
+	top: 15px; 
+	left:20px; 
+	width:100px;
+}
+
+.topbar{
+	position: relative;
+	top: 15px;
+	left:400px;
+}
+
+li{
+	display: inline;
+	list-style-type:none;	
+	float: right;
+}
+
+#container{
+	width:960px;
+}
+	
