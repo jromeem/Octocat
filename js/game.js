@@ -82,6 +82,7 @@ $(document).ready(function(){
 		$('#save').click(function(){
 			var drawing_url = $('canvas')[0].toDataURL();
 			var data = { drawing: drawing_url }
+			$('body').fadeOut(500);
 			$.post('drew_action.php', data, function(drewResult) {
 				console.log(drewResult);
 				document.location.reload(true);
@@ -93,6 +94,7 @@ $(document).ready(function(){
 		if ($('#wordInput').val() == '') return;
 		if (e.keyCode == 13){
 			var data = { phrase : $('#wordInput').val() };
+			$('body').fadeOut(500);
 			$.post('wrote_action.php', data, function(wroteResult) {
 				console.log(wroteResult);
 				document.location.reload(true);

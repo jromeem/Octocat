@@ -20,6 +20,7 @@ for($i=0; $i<=count($allGames); $i++){
 }
 
 $phrase_json = json_encode(array(0 => $phrase));
+header("content-type:application/json");
 echo $phrase_json;
 
 ?>
