@@ -1,8 +1,12 @@
 <?php session_start(); 
 
-	incude '../helper.php';
+	include '../helper.php';
 	
-	$rand_val = rand(1, 10);
+	$countQuery = 'SELECT COUNT(*) FROM games';
+	$countResult = connectAndRead($countQuery);
+	$count = $countResult[0];
+	
+	$rand_val = rand(1, $count);
 	$query = 'SELECT * FROM games WHERE id='.$rand_val;
 	$result = connectAndRead($query);
 	
@@ -48,10 +52,12 @@
 				<?php
 					if ($_SESSION['turn'] == 'words') {
 						echo "<h1>$play</h1>";
+						$_SESSION['turn'] = 'draws';
 					} else {
 						echo '<div id="canvasDiv">
 							  <button id="clear">Clear!</button>
 							  <button id="save">Save!</button></div>';
+						$_SESSION['turn'] = 'words';
 					}
 				?>
 				<div id="wordDiv">
