@@ -21,7 +21,8 @@
                 </td>
                 <td>   
            			<div class = "topbar">
-                		<img src="img/archive.png" id="menuIcon"/> 
+				<!--<img src="img/archive.png" id="menuIcon"/>-->
+				<img src="img/back_h.png" id="back_h" />
             		</div>
                 </td>
                 </tr>
@@ -36,13 +37,15 @@
 		<div id="registerPopup">
 			<form id="register-form">
 				Enter your desired username: <br/><br/>
-				<input type="text" id="register-username" name="username" />
+				<input type="text" id="register-username" name="username" /><br />
+				<img src="img/submit_h.png" id="register-submit" />
 			</form>
 		</div>
 		<div id="loginPopup">
 			<form id="login-form">
 				Enter your username: <br/><br/>
-				<input type="text" id="login-username" name="username" />
+				<input type="text" id="login-username" name="username" /><br />
+				<img src="img/submit_h.png id="login-form-submit" />
 			</form>
 		</div>
 	</div><!--container end div-->
@@ -71,7 +74,7 @@
 				$("#login-form").fadeIn();
 			});
 			
-			$('#icon').click(function(){
+			$('#logo').click(function(){
 				window.location="http://octocat.comyr.com/menu/";
 			});
 			
