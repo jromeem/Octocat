@@ -40,8 +40,6 @@
         		<form action="create_action.php" method="post">
 					<p >Type in a word</p> <br />
                     <input type="text" name="wordInput" id="wordInput"/><br />
-                    <br/>
-                    <input type="image" src="../img/create.png" id = "createButton"/>
  				</form>
 
                 <br />
