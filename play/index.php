@@ -1,12 +1,8 @@
 <?php session_start(); 
 
 	include '../helper.php';
-	
-	$countQuery = 'SELECT COUNT(*) FROM games';
-	$countResult = connectAndRead($countQuery);
-	$count = $countResult[0];
-	
-	$rand_val = rand(1, $count);
+
+	$rand_val = rand(1, 10);
 	$query = 'SELECT * FROM games WHERE id='.$rand_val;
 	$result = connectAndRead($query);
 	
