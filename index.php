@@ -10,9 +10,12 @@
 		<div id="header"></div>
 		<div id="content">
 			<div id="gameDiv">
-				<div id="canvasDiv"></div>
+				<div id="canvasDiv">
+					<button id="clear">Clear!</button>
+					<button id="save">Save!</button>
+				</div>
 				<div id="wordDiv">
-					WHAT IS THIS<br />
+					WHAT IS THIS??????
 					<input type="text" id="wordInput" />
 				</div>
 			</div>
