@@ -1,6 +1,6 @@
 <?php
 
-function connectAndQuery($query) {
+function connectAndRead($query) {
 	include 'config.php';
 	
 	mysql_connect($host, $user, $pass);
@@ -17,6 +17,15 @@ function connectAndQuery($query) {
 	catch ($e) {}
 	
 	return $array;
+}
+
+function connectAndWrite($query) {
+	include 'config.php';
+	
+	mysql_connect($host, $user, $pass);
+	mysql_select_db($dbname);
+	
+	$result = mysql_query($query);
 }
 
 ?>
