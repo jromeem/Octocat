@@ -11,6 +11,7 @@ $array = connectAndRead($query);
 header('Content-Type: application/json');
 if (!empty($array)) {
 	$_SESSION['username'] = $username;
+	$_SESSION['user_id']  = $array[0]['id'];
 	echo '{"status":"success"}';
 } else {
 	echo '{"status":"failure"}';

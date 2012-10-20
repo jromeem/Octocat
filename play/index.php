@@ -35,7 +35,7 @@
 					<button id="save">Save!</button>
 				</div>
 				<div id="wordDiv">
-					WAT IS THIS, <?= $_SESSION['username']; ?>??????
+					WAT IS THIS, <?= $_SESSION['username']; ?>?????? YOUR USER ID IS <?= $_SESSION['user_id']; ?>
 					<input type="text" id="wordInput" />
 				</div>
 			</div>
