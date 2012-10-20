@@ -8,6 +8,8 @@ $drawing = $_POST['drawing'];
 
 $draw_json = json_encode(array($drawing));
 
+echo $draw_json;
+
 $drawQuery = "INSERT INTO games (id, draws) VALUES (". $game_id .",'". $draw_json ."')";
 connectAndWrite($drawQuery);
 
