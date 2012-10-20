@@ -12,6 +12,4 @@ $phraseQuery = "UPDATE games SET words='$phraseJson' WHERE id=$gameId";
 
 connectAndWrite($phraseQuery);
 
-}
-
 ?>
