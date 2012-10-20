@@ -1,6 +1,6 @@
 <?php session_start(); 
 
-	incude '../helper.php';
+	include '../helper.php';
 	
 	$rand_val = rand(1, 10);
 	$query = 'SELECT * FROM games WHERE id='.$rand_val;
