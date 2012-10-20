@@ -1,3 +1,9 @@
+<?php
+	session_start();
+
+	if (empty($_SESSION['username']))
+		header('Location: http://octocat.comyr.com/logout.php');
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 	<head>
@@ -5,7 +11,6 @@
 		
 		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="../css/style.css" />
-		<title> Menu </title>
 	</head>
 	<body>
     <div class="container">
@@ -60,6 +65,10 @@
 		<script>
 			$('#menulogout').click(function(){
 				window.location = "http://octocat.comyr.com/logout.php";
+			});
+
+			$('#logo').click(function(){
+				window.location = "http://octocat.comyr.com/menu";
 			});
 		</script>
 </html>

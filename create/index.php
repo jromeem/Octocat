@@ -53,7 +53,7 @@
 			$('#menulogout').click(function(){
 				window.location = "http://octocat.comyr.com/logout.php";
 			});
-			$('#icon').click(function(){
+			$('#logo').click(function(){
 				window.location = "http://octocat.comyr.com/menu";
 			});
 		</script>
