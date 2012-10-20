@@ -84,3 +84,7 @@ li{
 #registerPopup {
 	display:none;
 }
+
+#loginPopup {
+	display:none;
+}
