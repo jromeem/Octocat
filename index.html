@@ -31,16 +31,18 @@
                 <br />
             	<div id="register"><img src="img/register.png" /></div>
        		</div>
+
 		<div id="registerPopup">
 			<form id="register-form">
-				Enter your desired username: <input type="text" id="register-username" name="username" />
+				Enter your desired username: <br/><br/>
+				<input type="text" id="register-username" name="username" />
 			</form>
 		</div>
-		<div id="loginPopup">
+		<!--<div id="loginPopup">
 			<form id="login-form">
 				Enter your username: <input type="text" id="login-username" name="username" />
 			</form>
-		</div>
+		</div>-->
 	</div><!--container end div-->
 	</body>
 	<script>
@@ -57,8 +59,18 @@
 			);
 			
 			$('#register').click(function(){
-				
+				$("#register").fadeOut();
+				$("#login").fadeOut();
+				$("#register-form").fadeIn();
+			});
+			$('#login').click(function(){
+				$("#register").fadeOut();
+				$("#login").fadeOut();
+				$("#register-form").fadeIn();
 			});
 		});
 	</script>
+	
+
+
 </html>
