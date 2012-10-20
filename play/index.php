@@ -49,7 +49,9 @@
 			<div id="gameDiv">
 				<?php
 					if ($_SESSION['turn'] == 'words') {
-						// output a drawing
+						// user sees a drawing
+						
+						// user writes
 						echo '<div id="canvasWrapper"><div id="canvasDiv"></div><h1>Try to draw ' . $play . '!</h1>
 							  <button id="clear">Clear!</button>
 							  <button id="save">Save!</button></div>';

@@ -10,8 +10,6 @@ $draw_json = json_encode(array($drawing));
 
 $drawQuery = "UPDATE games SET draws='$draw_json' WHERE id=$game_id";
 
-echo $drawQuery;
-
 connectAndWrite($drawQuery);
 
 ?>
