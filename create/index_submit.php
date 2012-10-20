@@ -1,5 +1,5 @@
 <?php
-    include 'helper.php';
+    include '../helper.php';
 	
 	$query = 'SELECT * FROM users';
     $result = connectAndQuery($query);
