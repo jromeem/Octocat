@@ -1,6 +1,6 @@
 <?php
 
-include 'helper.php'
+include 'helper.php';
 
 session_start();
 
@@ -12,9 +12,9 @@ $array = connectAndRead($query);
 
 if (!empty($array)) {
 	$_SESSION['username'] = $username;
-	header('Location:/play');
+	echo '{"status": "success"}';
 } else {
-	header('Location:index.html');
+	echo '{"status": "failure"}';
 }
 
 ?>
