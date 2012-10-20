@@ -18,31 +18,44 @@
                 </td>
                 <td>   
            			<div class = "topbar">
-                		<img src="img/archive.png" id="menuIcon"/> 
+                    <ul>
+                    		<li><img src="img/archive.png" id="menuIcon"/></li>
+                        	<li><img src="img/logout.png" id="menulogout"/></li>
+                    	</ul>
             		</div>
                 </td>
                 </tr>
            </table>
 		</div>
-        	<div id="centerButtons">
-        		<div id="login"><img src="img/login.png" /></div>
-                <br />
-            	<div id="register"><img src="img/register.png" /></div>
-       		</div>
+        		<div id="gameDiv">
+				<div id="canvasDiv">
+					<button id="clear">Clear!</button>
+					<button id="save">Save!</button>
+				</div>
+				<div id="wordDiv">
+					WHAT IS THIS<br />
+					<input type="text" id="wordInput" />
+				</div>
+			</div>
 	</div><!--container end div-->
 	</body>
 	<script>
 		$(document).ready(function(){
 			$('#register, #login').hover(
 				function(){
-					var imgName = $(this).attr('id');
-					$(this).children().attr('src', 'img/' + imgName + '_dp.png');
+					var bid = $(this).attr('id');
+					$(this).children().html('<img src="img/' + bid + '_dp.png" />');
 				},
 				function(){
-					var imgName = $(this).attr('id');
-					$(this).children().attr('src', 'img/' + imgName + '.png');
+					console.log($(this).children().html());
+					var bid = $(this).attr('id');
+					$(this).children().html('<img src="img/' + bid + '.png" />');
 				}
 			);
 		});
 	</script>
 </html>
+
+
+
+
