@@ -1,7 +1,7 @@
 <?php
     include 'helper.php';
 	
-	$query = 'SELECT * FROM teletub_users';
+	$query = 'SELECT * FROM users';
     $result = connectAndQuery($query);
 	
 	//print_r($result);
