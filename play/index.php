@@ -27,6 +27,7 @@
 		<script src="../js/game.js"></script>
 		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<title> Game </title>
 	</head>
 	<body>
         <div class="container">
@@ -57,8 +58,8 @@
 						
 						// user writes
 						echo '<div id="canvasWrapper"><div id="canvasDiv"></div><h4>Try to draw ' . $play . '!</h4>
-							  <img src="../img/trash.png" id="clear" />
-							  <img src="../img/save.png" id="save" /></div>';
+							  <span class="rightalign"><img src="../img/trash.png" width="54" height="75" id="clear" /></span>
+							  <span class="rightalign"><img src="../img/save.png" width="54" height="75" id="save" /></span></div>';
 						$_SESSION['turn'] = 'draws';
 					} else {
 						echo '<img id="play-img" src="' . $play . '"></img>
@@ -77,6 +78,10 @@
 		<script>
 			$('#menulogout').click(function(){
 				window.location = "http://octocat.comyr.com/logout.php";
+			});
+			
+			$('#icon').click(function(){
+				window.location="http://octocat.comyr.com/menu/";
 			});
 		</script>
 	</body>

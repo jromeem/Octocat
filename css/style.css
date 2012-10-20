@@ -49,6 +49,10 @@ li{
 	
 }
 
+.rightalign{
+float:right;
+}
+
 #menuIcon{
 	width:150px;
 	position:relative;
