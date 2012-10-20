@@ -8,10 +8,38 @@
 
 <body>
 
-<form action="createGame.php" method="post">
-LALAL: <input type="text" name="wordInput" />
-<input type="submit" />
-</form>
+    <div class="container">
+		<div id="header">
+            <table>
+            	<td>
+                <th>
+        			<div id = "logo">
+						<img src="img/octomom_logo.png" id="logo"/>
+        			</div>
+                </th>
+                <th>   
+           			<div class = "topbar">
+                		   <ul>
+                    	<li><img src="img/archive.png" id="menuIcon"/></li>
+                        <li><img src="img/archive.png" id="menuIcon"/></li>
+                    </ul>
+            		</div>
+                </th>
+                </td>
+           </table>
+		</div>
+        	<div id="centerButtons">
+        		<form action="createGame.php" method="post">
+					<p >Type in a word</p> <br />
+                    <input type="text" name="wordInput" id = "inputtext"/><br />
+                    <br/>
+                    <input type="image" src="img/create.png" id = "createButton"/>
+ 				</form>
+
+                <br />
+            	
+       		</div>
+	</div><!--container end div-->
 
 </body>
 </html>
