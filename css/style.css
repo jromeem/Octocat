@@ -89,4 +89,6 @@ li{
 
 #loginPopup {
 	display:none;
+	margin-top: 150px;
+	margin-left: 300px;
 }
