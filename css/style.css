@@ -100,3 +100,7 @@ li{
 #menuIcon:hover {
 	cursor:pointer;
 }
+
+#icon:hover {
+	cursor:pointer;
+}
