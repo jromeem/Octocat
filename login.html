@@ -32,15 +32,17 @@
 	</div><!--container end div-->
 	</body>
 	<script>
-		$('#register, #login').hover(
-			function(){
-				var b = $(this).attr('id');
-				$('#' + b).html('<img src="img/' + b + '_dp.png" id="' + b + '_dp" />');
-			},
-			function(){
-				var b = $(this).attr('id');
-				$('#' + b + '_dp').html('<img src="img/' + b + '.png" />');
-			}
-		);
+		$(document).ready(function(){
+			$('#register, #login').hover(
+				function(){
+					var bid = $(this).attr('id');
+					$(this).children('img').html('<img src="img/' + b + '_dp.png" id="' + b + '_dp" />');
+				},
+				function(){
+					var bid = $(this).attr('id');
+					$(this).children('img').html('<img src="img/' + b + '.png" />');
+				}
+			);
+		});
 	</script>
 </html>
