@@ -2,6 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script src="../js/jquery-1.8.2.min.js"></script>
+<script src="../js/create.js"></script>
 <link rel="stylesheet" href="../css/style.css">
 <title>Untitled Document</title>
 </head>
@@ -20,7 +22,7 @@
            			<div class = "topbar">
                 		   <ul>
                     	<li><img src="../img/archive.png" id="menuIcon"/></li>
-                        <li><img src="../img/archive.png" id="menuIcon"/></li>
+                        <li><img src="../img/logout.png" id="menulogout"/></li>
                     </ul>
             		</div>
                 </th>
@@ -30,7 +32,7 @@
         	<div id="centerButtons">
         		<form action="createGame.php" method="post">
 					<p >Type in a word</p> <br />
-                    <input type="text" name="wordInput" id = "inputtext"/><br />
+                    <input type="text" name="wordInput" id="wordInput"/><br />
                     <br/>
                     <input type="image" src="../img/create.png" id = "createButton"/>
  				</form>
@@ -40,5 +42,10 @@
        		</div>
 	</div><!--container end div-->
 
+		<script>
+			$('#menulogout').click(function(){
+				window.location = "http://octocat.comyr.com/logout.php";
+			});
+		</script>
 </body>
 </html>

@@ -63,5 +63,10 @@
 			<a href="other next page"><img src="other trash" id="playButton" /></a> -->
 		</div>
         </div>
+		<script>
+			$('#menulogout').click(function(){
+				window.location = "http://octocat.comyr.com/logout.php";
+			});
+		</script>
 	</body>
 </html>
