@@ -20,7 +20,8 @@ body{
 }
 
 canvas{ 
-	border:1px solid black; 
+	border:1px solid black;
+	background:url(../img/notepad.png);
 }
 
 #logo{ 
@@ -146,4 +147,9 @@ float:right;
 
 #clear:hover {
 	cursor:pointer;
+}
+
+#avatars {
+	position:relative;
+	right:120px;
 }

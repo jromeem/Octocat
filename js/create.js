@@ -8,4 +8,12 @@ $(document).ready(function(){
 			return false;
 		}
 	});
+
+	$('#createButton').click(function(){
+		var data = { phrase : $('#wordInput').val() };
+		$.post('create_action.php', data, function(createResult) {
+			console.log(createResult);
+		});
+		return false;
+	});
 });

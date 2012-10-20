@@ -1,3 +1,4 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -5,7 +6,7 @@
 <script src="../js/jquery.cycle.all.js"></script>
 <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
 <link rel="stylesheet" href="../css/style.css" />
-<title> Archive</title>
+<title>Telephone Pictionary: Archive</title>
 </head>
 
 <body>
@@ -32,9 +33,12 @@
         	<div id="archiveTable">
         		<div id="slideShow">
                     <ul id = "slides">
-                            <li><img id="image" src="../img/octomom_logo.png"  width="100px"/></li>
-                            <li><img src="../img/archive.png" width="100px"/></li>
-                            <li><img src="../img/logout.png" width="100px" /></li>
+                            <li><img id="image" src="../img/1.png"  width="500px"/></li>
+                            <li><img src="../img/2.png" width="500px"/></li>
+                            <li><img src="../img/3.png" width="500px" /></li>
+                            <li><img src="../img/4.png"  width="500px"/></li>
+                            <li><img src="../img/5.png" width="500px"/></li>
+                            <li><img src="../img/6.png" width="500px" /></li>
                     </ul>
                 </div>
             	
@@ -43,17 +47,17 @@
 
 </body>
 <script>
-       // $(document).ready(function(){
+        $(document).ready(function(){
 
-            // $('ul#slides').cycle({
-               // fx: 'fade',
-               // speed: 300,
-              //  timeout: 3000, 
-             //   next:   '#slides', 
-           //     pause:   1 
-         //   });
+            $('ul#slides').cycle({
+                fx: 'fade',
+                speed: 300,
+                timeout: 3000, 
+                next:   '#slides', 
+                pause:   1 
+            });
 
             
-       // });
+        });
     </script>
 </html>

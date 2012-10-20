@@ -28,7 +28,6 @@
                 <td>   
            			<div class = "topbar">
                 		   <ul>
-                    	<li><img src="../img/archive.png" id="menuIcon"/></li>
                         <li><img src="../img/logout.png" id="menulogout"/></li>
                     </ul>
             		</div>
@@ -40,8 +39,6 @@
         		<form action="create_action.php" method="post">
 					<p >Type in a word</p> <br />
                     <input type="text" name="wordInput" id="wordInput"/><br />
-                    <br/>
-                    <input type="image" src="../img/create.png" id = "createButton"/>
  				</form>
 
                 <br />
@@ -53,7 +50,7 @@
 			$('#menulogout').click(function(){
 				window.location = "http://octocat.comyr.com/logout.php";
 			});
-			$('#icon').click(function(){
+			$('#logo').click(function(){
 				window.location = "http://octocat.comyr.com/menu";
 			});
 		</script>

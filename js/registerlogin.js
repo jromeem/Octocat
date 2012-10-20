@@ -19,6 +19,20 @@ $(document).ready(function(){
 		}
 	});
 
+	$('#register-submit').click(function(){
+		var data = { username : $('#register-username').val() };
+		$.post('register_action.php', data, function(regResult) {
+			if (regResult['status'] == 'failure'){
+				$('body').html('<h1>NAME ALREADY TAKEN, TOO BAD</h1>');
+			}
+			else{
+				window.location = 'http://www.octocat.comyr.com';
+			}
+		});
+		return false;
+	});
+
+
 	// login
 	$('#login').click(function(){
 		$('#loginPopup').show();
@@ -37,5 +51,18 @@ $(document).ready(function(){
 			});
 			return false;
 		}
+	});
+
+	$('#login-form-submit').click(function(){
+		var data = { username : $('#login-username').val() };
+		$.post('login_action.php', data, function(loginResult) {
+			if (loginResult['status'] == 'failure'){
+				alert('bad login');
+			}
+			else {
+				window.location = "/menu";
+			}
+		});
+		return false;
 	});
 });
