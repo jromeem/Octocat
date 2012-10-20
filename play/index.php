@@ -51,6 +51,8 @@
            </table>
 		</div>
 		<div >
+			<div id="notepad">
+				<img src="../img/notepad.png" />
 			<div id="gameDiv">
 				<?php
 					if ($_SESSION['turn'] == 'words') {
@@ -58,8 +60,8 @@
 						
 						// user writes
 						echo '<div id="canvasWrapper"><div id="canvasDiv"></div><h4>Try to draw ' . $play . '!</h4>
-							  <span class="rightalign"><img src="../img/trash.png" width="54" height="75" id="clear" /></span>
-							  <span class="rightalign"><img src="../img/save.png" width="54" height="75" id="save" /></span></div>';
+							  <span class="rightalign"><img src="../img/trash.png" width="50%" height="50px" id="clear" /></span>
+							  <span class="rightalign"><img src="../img/save.png" width="50%" height="50px" id="save" /></span></div>';
 						$_SESSION['turn'] = 'draws';
 					} else {
 						echo '<img id="play-img" src="' . $play . '"></img>
@@ -70,6 +72,7 @@
 						$_SESSION['turn'] = 'words';
 					}
 				?>
+			</div>
 			</div>
 			<!-- <a href="next page"><img src="trashhhh" id="createButton" /></a>
 			<a href="other next page"><img src="other trash" id="playButton" /></a> -->

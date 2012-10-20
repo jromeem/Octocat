@@ -20,7 +20,12 @@ body{
 }
 
 canvas{ 
-	border:1px solid black; 
+	border:1px solid black;
+	position: absolute;
+}
+
+#notepad{
+    position:static;
 }
 
 #logo{ 
@@ -146,4 +151,12 @@ float:right;
 
 #clear:hover {
 	cursor:pointer;
+}
+
+#login-form-submit {
+	width:40%;
+}
+
+#register-submit {
+	width:40%;
 }
