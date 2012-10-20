@@ -28,7 +28,6 @@
                 <td>   
            			<div class = "topbar">
                 		   <ul>
-                    	<li><a href="../archive/index.html"><img src="../img/archive.png" id="menuIcon"/></a></li>
                         <li><img src="../img/logout.png" id="menulogout"/></li>
                     </ul>
             		</div>
