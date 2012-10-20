@@ -1,27 +1,18 @@
 <?php session_start(); 
 
 	include '../helper.php';
-	
-	/*
-	$countQuery = 'SELECT COUNT(*) FROM games';
-	$countResult = connectAndRead($countQuery);
-	$count = $countResult;
-	*/
-	
-	//echo = $countResult;
-	
-	//$rand_val = rand(1, $count);
-	
-	$rand_val = rand(1, $count);
+
+	$rand_val = rand(1, 10);
 	$query = 'SELECT * FROM games WHERE id='.$rand_val;
 	$result = connectAndRead($query);
 	
-	$play = 'trollolol';
+	$play = '';
 	if ($_SESSION['turn'] == 'words') {
-		$play = json_decode($result[0]['words'])[0];
+		$play = json_decode($result[0]['words']);
 	} else {
-		$play = json_decode($result[0]['draws'])[0];
+		$play = json_decode($result[0]['draws']);
 	}
+	$play = $play[0];
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
