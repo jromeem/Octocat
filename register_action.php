@@ -17,14 +17,4 @@ if (!empty($array)) {
 	echo '{"status":"success"}';	
 }
 
-/*
-$usernameExists = False;
-for ($i = 0; $i<sizeof($array); $i++) {
-	if ($array[$ii]['username'] == $username) {
-		$usernameExists = True;
-	}
-}
-*/
-
-
 ?>

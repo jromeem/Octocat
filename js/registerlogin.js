@@ -6,7 +6,7 @@ $(document).ready(function(){
 	$('#register-username').keypress(function(e){
 		if (e.keyCode == 13){
 			var data = { username : $('#register-username').val() };
-			$.post('register_action.php', function(result) {
+			$.post('register_action.php', data, function(result) {
 				console.log(result);
 			});
 			return false;
