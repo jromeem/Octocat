@@ -9,9 +9,12 @@ function connectAndQuery($query) {
 	$result = mysql_query($query);
 	
 	$array = array();
-	while($row = mysql_fetch_array($result)) {
-		array_push($array, $row);
+	try {
+		while($row = mysql_fetch_array($result)) {
+			array_push($array, $row);
+		}
 	}
+	catch ($e) {}
 	
 	return $array;
 }
